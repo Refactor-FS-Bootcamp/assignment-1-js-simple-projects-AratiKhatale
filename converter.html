@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="converter.css">
+    <title>Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Converter</h1>
+        <form action=""> <h4>Weight</h4>
+            <div class="from-group">
+                <input type="number" name="" id="input1" 
+                class="input1" placeholder="Enter Kilograms..">
+            </div>
+        </form>
+        <div class="input2"><h4>Pounds:</h4>
+            <div id="lbsOutput"></div>
+        </div>
+
+        <form action=""> <h4 id="Measurement">Measurement</h4>
+            <div class="from-group">
+                <input type="number" name="" id="Feet" 
+                class="input1" placeholder="Enter Feet..">
+            </div>
+        </form>
+        <div class="Centimeters"><h4>Centimeters:</h4>
+            <div id="CentimetersOutput" ></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("input1").addEventListener("input", e=> {
+            let kgs=e.target.value;
+            document.getElementById("lbsOutput").innerHTML=kgs*2.205;
+        })
+
+        document.getElementById("Feet").addEventListener("input", e =>{
+            let centimeter=e.target.value;
+            document.getElementById("CentimetersOutput").innerHTML=centimeter * 30.40;
+        })
+
+    </script>
+</body>
+</html>
